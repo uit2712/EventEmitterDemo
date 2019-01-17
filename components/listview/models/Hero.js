@@ -23,4 +23,8 @@ export default class Hero {
             this.avatar = hero.avatar;
         }
     }
+
+    clone() {
+        return new Hero(this.id, this.name, this.superpower, this.avatar);
+    }
 }

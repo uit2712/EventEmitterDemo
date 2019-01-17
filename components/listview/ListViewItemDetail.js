@@ -17,7 +17,8 @@ export default class ListViewItemDetail extends Component<Props> {
             && this.props.navigation.state
             && this.props.navigation.state.params) {
                 updateHeroEvent = this.props.navigation.state.params.updateHeroEvent;
-                hero = this.props.navigation.state.params.hero;
+                if (this.props.navigation.state.params.hero)
+                    hero = this.props.navigation.state.params.hero.clone();
             }
 
         this.state = {
