@@ -6,7 +6,8 @@ use EventEmitter and emit to parent component every time I press button UpdateIn
 
 ALL STEPS:
 - Step 1: Create and render ListView (video #15 Lets create your own listview in React Native, link in the description)
-- Step 2: Create component Detail allows to edit ListViewItem info
-- Step 3: Declare EventEmitter and emit to parent component every time we press button Update in child component Detail
+- Step 2: Add component HomeView, add navigators
+- Step 3: Create component Detail allows to edit ListViewItem info
+- Step 4: Declare EventEmitter and emit to parent component every time we press button Update in child component Detail
 
 THANK YOU FOR WATCHING VIDEO, REMEMBER TO LIKE AND SUBSCRIBE FOR THE NEW VIDEO :D

@@ -6,8 +6,9 @@ import {
     View,
     Text
 } from 'react-native';
+import { withNavigation } from 'react-navigation';
 
-export default class ListViewItem extends Component<Props> {
+class ListViewItem extends Component<Props> {
     constructor(props: Props) {
         super(props);
 
@@ -16,9 +17,14 @@ export default class ListViewItem extends Component<Props> {
         };
     }
 
+    goToListViewItemDetail = () => {
+        const { navigate } = this.props.navigation;
+        navigate('ListViewItemDetail', { hero: this.state.hero, updateHeroEvent: this.props.updateHeroEvent });
+    }
+
     render() {
         return (
-            <TouchableOpacity style={styles.listViewItemContainer}>
+            <TouchableOpacity style={styles.listViewItemContainer} onPress={this.goToListViewItemDetail}>
                 <Image source={this.state.hero.avatar} style={styles.avatar}/>
                 <View style={styles.info}>
                     <Text style={styles.heroName}>{this.state.hero.name}</Text>
@@ -28,6 +34,8 @@ export default class ListViewItem extends Component<Props> {
         )
     }
 }
+
+export default withNavigation(ListViewItem);
 
 const styles = StyleSheet.create({
     listViewItemContainer: {

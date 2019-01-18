@@ -17,7 +17,7 @@ export default class ListView extends Component<Props> {
     showListHeroes() {
         let result;
         result = this.state.heroes.map((hero: Hero, key: any) =>
-            <ListViewItem hero={hero} key={key}/>
+            <ListViewItem hero={hero} key={key} updateHeroEvent={this.props.updateHeroEvent}/>
         );
 
         return result;
